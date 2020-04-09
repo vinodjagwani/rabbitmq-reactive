@@ -1,0 +1,11 @@
+rabbit-mq:
+  image: "rabbitmq:3.8.3-management"
+  hostname: "reactor-rabbit"
+  environment:
+    RABBITMQ_DEFAULT_USER: "guest"
+    RABBITMQ_DEFAULT_PASS: "guest"
+  ports:
+    - "15672:15672"
+    - "5672:5672"
+  labels:
+    NAME: "rabbit-mq"
